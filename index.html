@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+
 </head>
 <body>
-    <div>
-        <h2>Online E-Wallet</h2>
-    </div>
-    <div></div>
+    <section class="grid grid-cols-2 bg-stone-400 py-4 justify-center">
+        <div class="text-center">
+            <h2 class="text-5xl font-semibold">Online E-Wallet</h2>
+
+            <div class="text-justify">
+              <div class="flex flex-row">
+                <p class="">Deposite: <span>$ <input id="dep-field" type="text" min="0" value="0" class="w-28 "></span></p>
+                <button id="deposite" class="bg-blue-500 w-10 rounded">OK</button>
+              </div>
+
+              <div class="flex flex-row">
+                <p class="">Withdraw: <span>$ <input id="withdraw-field" type="text" min="0" value="0" class="w-28 "></span></p>
+                <button id="withdraw" class="bg-blue-500 w-10 rounded">OK</button>
+              </div>
+                
+                <p>Total Balance: $<span id="balance"></span></p>
+
+                <p>Savings: $<span id="save"></span></p>
+            </div>
+        </div>
+    
+        <div class="">
+            <img class="w-96" src="img/wallet.png" alt="" srcset="">
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
